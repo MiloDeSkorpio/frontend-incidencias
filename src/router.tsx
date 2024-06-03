@@ -1,21 +1,39 @@
 import { createBrowserRouter } from 'react-router-dom'
-import Layout from './layouts/Layout'
-import Incidencias from './views/Incidencias'
-import NewIncidencia from './views/NewIncidencia'
+// Layouts
+// import Layout from './layouts/Layout'
+import LayoutLogin from './layouts/LayoutLogin'
+// Views
+// import Incidencias from './views/Incidencias'
+// import NewIncidencia from './views/NewIncidencia'
+import Login from './views/Login'
 
 export const router = createBrowserRouter([
   {
     path: '/',
-    element: <Layout />,
+    element: <LayoutLogin />,
     children: [
       {
         index: true,
-        element: <Incidencias />
-      },
-      {
-        path: 'incidencias/nueva',
-        element: <NewIncidencia />
+        element: <Login />
       }
+      // {
+      //   path: 'incidencias/nueva',
+      //   element: <NewIncidencia />
+      // }
     ]
-  }
+  },
+  // {
+  //   // path: 'supervisor',
+  //   // element: <Layout />,
+  //   // children: [
+  //   //   {
+  //   //     index: true,
+  //   //     element: <Incidencias />
+  //   //   },
+  //   //   {
+  //   //     path: 'incidencias/nueva',
+  //   //     element: <NewIncidencia />
+  //   //   }
+  //   ]
+  // }
 ])
