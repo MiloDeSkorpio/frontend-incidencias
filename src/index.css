@@ -11,7 +11,7 @@ body {
   background-size: cover;
 } 
 .login {
-  background-image: url('/busmap.png');
+  background-image: url('/cord.png');
   background-size: calc(75vh);
   background-repeat: no-repeat;
 
