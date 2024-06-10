@@ -1,18 +1,44 @@
 // import { Link } from "react-router-dom";
-import InputEmail from "./cruds/helpers/InputEmail";
-import InputPass from "./cruds/helpers/InputPass";
+import Input from "./cruds/helpers/Input";
 import InputSubmit from "./cruds/helpers/InputSubmit";
 import MiniButton from "./cruds/helpers/MiniButton";
 export default function Login() {
+  // Types
+  const pass = 'password'
+  const email = 'email'
+  //
   const btnTit = 'Iniciar Sesión'
   const hrefMin = 'pass'
   const miniTit = 'Recupera tu Contraseña'
+  // datos input number
+  const lblEma = 'Email:'
+  const kwEma = 'email'
+  const namePhEma = 'pema18@correo.com'
+  // datos input pass
+  const lblPas = 'Contraseña:'
+  const kwPas = 'password'
+  const namePhPas = 'Contraseña de ingreso'
+    
   return (
     <>
         <h2 className="text-2xl text-center font-extrabold text-ortgray-950">Inicio de Sesión</h2>
         <form className="mt-5 ">
-          <InputEmail />
-          <InputPass />
+        <Input
+        type={email}
+        lblName={lblEma}
+        hmtlFor={kwEma}
+        id={kwEma}
+        name={kwEma}
+        placeholder={namePhEma}
+      />
+      <Input
+        type={pass}
+        lblName={lblPas}
+        hmtlFor={kwPas}
+        id={kwPas}
+        name={kwPas}
+        placeholder={namePhPas}
+      />
           <InputSubmit value={btnTit}/>
           <MiniButton href={hrefMin} namebtn={miniTit}/>
         </form>
