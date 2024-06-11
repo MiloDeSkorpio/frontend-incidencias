@@ -26,7 +26,7 @@ export default function LayoutLogin() {
         </div>
       </header>
 
-      <main className='login mx-auto rounded-md m-3 max-w-2xl h-[75vh] p-5 bg-[rgba(173,175,179,0.65)] backdrop-blur-lg shadow'>
+      <main >
         <Outlet />
       </main>
            
