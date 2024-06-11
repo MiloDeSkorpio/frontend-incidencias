@@ -4,7 +4,7 @@ export default function Layout() {
   return (
     <>
       <header className='bg-white  flex justify-between shadow-md'>
-        <div className='max-w-6xl py-2 flex mx-3'>
+        <div className='max-w-6xl py-2 flex'>
           <img 
           src="/Logo_CDMX.png" 
           alt=""
@@ -25,7 +25,7 @@ export default function Layout() {
 
         </div>
       </header>
-      <main>
+      <main className='h-screen mt-3'>
         <Outlet />
       </main>
     </>

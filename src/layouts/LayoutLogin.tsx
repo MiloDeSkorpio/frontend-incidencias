@@ -26,7 +26,7 @@ export default function LayoutLogin() {
         </div>
       </header>
 
-      <main >
+      <main className='h-screen'>
         <Outlet />
       </main>
            
