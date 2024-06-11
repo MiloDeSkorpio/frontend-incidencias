@@ -12,7 +12,7 @@ export default function ResetPass() {
   const kwEma = 'email'
   const namePhEma = 'pema18@correo.com'
   return (
-    <>
+    <div className='login mx-auto rounded-md m-3 max-w-2xl h-[75vh] p-5 bg-[rgba(173,175,179,0.65)] backdrop-blur-lg shadow'>
     <div className="flex justify-between">
       <h2 className="text-2xl font-extrabold text-ortgray-950 text-center">Recupera tu contraseña</h2>
     </div>
@@ -30,6 +30,6 @@ export default function ResetPass() {
     <InputSubmit  value={btnTit}/>
     <MiniButton href={hrefMin} namebtn={miniTit}/>
     </form>
-  </>
+  </div>
   )
 } 

@@ -20,7 +20,7 @@ export default function Login() {
   const namePhPas = 'Contraseña de ingreso'
     
   return (
-    <>
+    <div className='login mx-auto rounded-md m-3 max-w-2xl h-[75vh] p-5 bg-[rgba(173,175,179,0.65)] backdrop-blur-lg shadow'>
         <h2 className="text-2xl text-center font-extrabold text-ortgray-950">Inicio de Sesión</h2>
         <form className="mt-5 ">
         <Input
@@ -42,6 +42,6 @@ export default function Login() {
           <InputSubmit value={btnTit}/>
           <MiniButton href={hrefMin} namebtn={miniTit}/>
         </form>
-    </>
+    </div>
   );
 }
