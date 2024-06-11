@@ -11,6 +11,7 @@ import Integrador from './views/Integrador'
 import Consecionario from './views/Consecionario'
 import ResetPass from './views/ResetPass'
 import Users from './views/cruds/Users'
+import NewUser from './views/cruds/NewUser'
 export const router = createBrowserRouter([
   {
     path: '/',
@@ -31,12 +32,16 @@ export const router = createBrowserRouter([
     element: <Layout />,
     children: [
         {
-          path: 'cpanel',
+          path: 'panel',
           element: <Admin />
         },
         {
-          path: 'newuser',
+          path: 'usuarios',
           element: <Users />
+        },
+        {
+          path: 'new-user',
+          element: <NewUser />
         }
     ]
   },
