@@ -1,131 +1,58 @@
 import { Link } from "react-router-dom";
 
 export default function Users() {
+  const data = [
+    // Your data goes here, each row as an array
+    ["Col 1", "Col 2", "Col 3", "Col 4", "Col 5", "Col 6", "Col 7", "Col 8", "Col 9", "Col 10"],
+    ["Col 1", "Col 2", "Col 3", "Col 4", "Col 5", "Col 6", "Col 7", "Col 8", "Col 9", "Col 10"],
+    ["Col 1", "Col 2", "Col 3", "Col 4", "Col 5", "Col 6", "Col 7", "Col 8", "Col 9", "Col 10"],
+    ["Col 1", "Col 2", "Col 3", "Col 4", "Col 5", "Col 6", "Col 7", "Col 8", "Col 9", "Col 10"],
+    // ... more rows
+  ];
+
+  const columns = [
+    // Define your column names and any custom rendering functions
+    { title: 'ID', key: 'col1' },
+    { title: 'Nombre', key: 'col2' },
+    { title: 'Apellido', key: 'col3' },
+    { title: 'Telefono', key: 'col4' },
+    { title: 'email', key: 'col5' },
+    { title: 'Tipo', key: 'col6' },
+    { title: 'Organismo', key: 'col7' },
+    { title: 'Activo', key: 'col8' },
+    { title: 'Operacion', key: 'col9' },
+  ];
   return (
-    <>
+    <div className="mx-auto rounded-md pt-3 w-[95vw] sm:max-w-6xl h-auto p-5 bg-[rgba(173,175,179,0.65)] backdrop-blur-lg shadow">
       <div className="flex justify-between">
-        <h2 className="text-4xl font-black text-ortgray-800 ">
-          Registrar Nuevo Usuario
+        <h2 className="text-2xl text-center font-extrabold text-ortgray-950 ">
+          Usuarios
         </h2>
         <Link
-          to="/"
+          to="/manager/new-user"
           className="rounded-md border-2 border-ortindig-800 p-3 text-sm font-bold text-ortgray-900 shadow-sm hover:bg-ortindig-800 hover:text-white"
         >
-          Lista de Usuarios
+          Crear Usuario
         </Link>
       </div>
-      <form className="mt-10">
-      <div className="mb-4">
-          <label
-            className="text-gray-800"
-            htmlFor="nombre"
-          >Nombre:</label>
-          <input
-            id="nombre"
-            type="text"
-            className="mt-2 block w-full p-3 bg-gray-50"
-            placeholder="Pedro"
-            name="nombre"
-          />
-        </div>
-      <div className="mb-4">
-          <label
-            className="text-gray-800"
-            htmlFor="apellido"
-          >Apellido:</label>
-          <input
-            id="apellido"
-            type="text"
-            className="mt-2 block w-full p-3 bg-gray-50"
-            placeholder="Ramirez"
-            name="apellido"
-          />
-        </div>
-      <div className="mb-4">
-          <label
-            className="text-gray-800"
-            htmlFor="number"
-          >Telefono:</label>
-          <input
-            id="number"
-            type="number"
-            className="mt-2 block w-full p-3 bg-gray-50"
-            placeholder="5550201080"
-            name="number"
-          />
-        </div>
-      <div className="mb-4">
-          <label
-            className="text-gray-800"
-            htmlFor="email"
-          >Email:</label>
-          <input
-            id="email"
-            type="email"
-            className="mt-2 block w-full p-3 bg-gray-50"
-            placeholder="correo@ort.com.mx"
-            name="email"
-          />
-        </div>
-        <div className="mb-4">
-          <label
-            className="text-gray-800"
-            htmlFor="password"
-          >Password:</label>
-          <input
-            id="password"
-            type="password"
-            className="mt-2 block w-full p-3 bg-gray-50"
-            placeholder="Password Plataforma de Incidencias"
-            name="password"
-          />
-        </div>
-        <div className="mb-4">
-          <label className="text-gray-800" htmlFor="typeuser">
-            Nivel de Usuario:
-          </label>
-          <select
-            id="typeuser"
-            className="mt-2 block w-full p-3 bg-gray-50"
-            name="typeuser"
-          >
-            <option value="">-- Seleccione --</option>
-            <option value="1">JUDCV</option>
-            <option value="2">Integrador</option>
-          </select>
-        </div>
-        <div className="mb-4">
-          <label className="text-gray-800" htmlFor="organismo">
-            Organismo:
-          </label>
-          <select
-            id="organismo"
-            className="mt-2 block w-full p-3 bg-gray-50"
-            name="organismo"
-          >
-            <option value="">-- Seleccione --</option>
-            <option value="1">ORT</option>
-            <option value="1">BEA</option>
-          </select>
-        </div>
-        <div className="mb-4">
-          <label className="text-gray-800" htmlFor="observaciones">
-            Observaciones:
-          </label>
-          <input
-            id="observaciones"
-            type="text"
-            className="mt-2 block w-full p-3 bg-gray-50"
-            placeholder="Detalles de la Falla. ej. El Validador no muestra nada..."
-            name="observaciones"
-          />
-        </div>
-        <input
-          type="submit"
-          className="mt-5 w-full bg-ortindig-700 p-2 text-white font-bold text-lg cursor-pointer rounded"
-          value="Registrar Usuario"
-        />
-      </form>
-    </>
+      <table className="shadow">
+      <thead >
+        <tr >
+          {columns.map((col) => (
+            <th key={col.key} className="border border-ortgray-800">{col.title}</th>
+          ))}
+        </tr>
+      </thead>
+      <tbody>
+        {data.map((row) => (
+          <tr key={row[0]} >
+            {row.map((cell, index) => (
+              <td key={index} className="border border-ortgray-800">{cell}</td>
+            ))}
+          </tr>
+        ))}
+      </tbody>
+    </table>
+    </div>
   );
 }
