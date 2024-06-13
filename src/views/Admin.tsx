@@ -1,30 +1,30 @@
 import { Link } from "react-router-dom";
-
+import Card from "./cruds/helpers/Card";
 export default function Admin() {
-  const data = [
-    // Your data goes here, each row as an array
-    ["Col 1", "Col 2", "Col 3", "Col 4", "Col 5", "Col 6", "Col 7", "Col 8", "Col 9", "Col 10","Col 11"],
-    ["Col 1", "Col 2", "Col 3", "Col 4", "Col 5", "Col 6", "Col 7", "Col 8", "Col 9", "Col 10","Col 11"],
-    ["Col 1", "Col 2", "Col 3", "Col 4", "Col 5", "Col 6", "Col 7", "Col 8", "Col 9", "Col 10","Col 11"],
-    ["Col 1", "Col 2", "Col 3", "Col 4", "Col 5", "Col 6", "Col 7", "Col 8", "Col 9", "Col 10","Col 11"],
-    // ... more rows
-  ];
+  // const data = [
+  //   // Your data goes here, each row as an array
+  //   ["Col 1", "Col 2", "Col 3", "Col 4", "Col 5", "Col 6", "Col 7", "Col 8", "Col 9", "Col 10","Col 11"],
+  //   ["Col 1", "Col 2", "Col 3", "Col 4", "Col 5", "Col 6", "Col 7", "Col 8", "Col 9", "Col 10","Col 11"],
+  //   ["Col 1", "Col 2", "Col 3", "Col 4", "Col 5", "Col 6", "Col 7", "Col 8", "Col 9", "Col 10","Col 11"],
+  //   ["Col 1", "Col 2", "Col 3", "Col 4", "Col 5", "Col 6", "Col 7", "Col 8", "Col 9", "Col 10","Col 11"],
+  //   // ... more rows
+  // ];
 
-  const columns = [
-    // Define your column names and any custom rendering functions
-    { title: 'Folio', key: 'col1' },
-    { title: 'Autobus', key: 'col2' },
-    { title: 'Falla', key: 'col3' },
-    { title: 'Status', key: 'col4' },
-    { title: 'Supervisor', key: 'col5' },
-    { title: 'Creada', key: 'col6' },
-    { title: 'Asignada', key: 'col7' },
-    { title: 'Técnico', key: 'col8' },
-    { title: 'Cerrada', key: 'col9' },
-    { title: 'Tiempo de Atencion (H)', key: 'col10' },
-    { title: 'Operacion', key: 'col10' },
+  // const columns = [
+  //   // Define your column names and any custom rendering functions
+  //   { title: 'Folio', key: 'col1' },
+  //   { title: 'Autobus', key: 'col2' },
+  //   { title: 'Falla', key: 'col3' },
+  //   { title: 'Status', key: 'col4' },
+  //   { title: 'Supervisor', key: 'col5' },
+  //   { title: 'Creada', key: 'col6' },
+  //   { title: 'Asignada', key: 'col7' },
+  //   { title: 'Técnico', key: 'col8' },
+  //   { title: 'Cerrada', key: 'col9' },
+  //   { title: 'Tiempo de Atencion (H)', key: 'col10' },
+  //   { title: 'Operacion', key: 'col10' },
     
-  ];
+  // ];
   return (
     <>
     <div className="flex justify-between bg-ortgray-300">
@@ -55,7 +55,8 @@ export default function Admin() {
       </Link>
     </div>
     <div className="flex py-3">
-    <table>
+      <Card />
+    {/* <table>
       <thead >
         <tr >
           {columns.map((col) => (
@@ -72,7 +73,7 @@ export default function Admin() {
           </tr>
         ))}
       </tbody>
-    </table>
+    </table> */}
     </div>
   </>
   )
